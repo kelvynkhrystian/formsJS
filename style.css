@@ -22,3 +22,8 @@ main {
   min-height: 70vh; 
   width: 80%;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+}
