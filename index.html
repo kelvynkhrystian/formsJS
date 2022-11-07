@@ -9,188 +9,190 @@
 </head>
 <body>
   <main>
-    <section>
-      <h2>Forms de cuidado ao Pet</h2>
-      <h4>catalogando informações para pesquisa!</h4>
-      <hr>
-      <label for="name">
-        <p>Nome ( não será salvo )</p>
-        <input
-          type="text"
-          name="name"
-          placeholder="digite seu nome" 
-          required
-        >
-      </label>
-      <label for="email">
-        <p>Email <span>*</span></p>
-        <input
-          type="email" 
-          name="email"
-          placeholder="digite seu email" 
-          required
-        >
-      </label>
-    </section>
-    <section>
-      <p>1. Você tem algum pet ?</p>
+    <form method="GET">
+      <section>
+        <h2>Forms de cuidado ao Pet</h2>
+        <h4>catalogando informações para pesquisa!</h4>
+        <hr>
+        <label for="name">
+          <p>Nome ( não será salvo )</p>
+          <input
+            type="text"
+            name="name"
+            placeholder="digite seu nome" 
+            required
+          >
+        </label>
+        <label for="email">
+          <p>Email <span>*</span></p>
+          <input
+            type="email" 
+            name="email"
+            placeholder="digite seu email" 
+            required
+          >
+        </label>
+      </section>
+      <section>
+        <p>1. Você tem algum pet ?</p>
 
-      <label for="yespet">
-        <input type="radio" id="yespet" name="yesnopet">Sim
-      </label>
-
-      <label for="nopet"> 
-        <input type="radio" id="nopet" name="yesnopet">Não
-      </label>
-    </section>
-    <section>
-      <p>2. Qual tipo de animal seu pet é ?</p>
-
-      <label for="cachorro">
-        <input type="radio" id="cachorro" name="typepet"> Cachorro
-      </label>
-
-      <label for="gato">
-        <input type="radio" id="gato" name="typepet"> Gato
-      </label>
-
-      <label for="capivara">
-        <input type="radio" id="capivara" name="typepet"> Capivara
-      </label>
-
-      <label for="outro">
-        <input type="radio" id="outro" name="typepet"> Outro
-      </label>
-      
-    </section>
-    <section>
-      <p>3. Qual a data de nascimento do seu pet ?</p>
-
-      <label for="datepet">
-        <input type="date" id="datepet" name="datepet">
-      </label>
-
-    </section>
-    <section>
-      <p>4. Com o que você alimenta seu pet?</p>
-
-        <label for="racao"> 
-          <input type="checkbox" id="racao" name="racao"> Ração
+        <label for="yespet">
+          <input type="radio" id="yespet" name="yesnopet">Sim
         </label>
 
-        <label for="sementes"> 
-          <input type="checkbox" id="sementes" name="sementes"> Sementes
+        <label for="nopet"> 
+          <input type="radio" id="nopet" name="yesnopet">Não
+        </label>
+      </section>
+      <section>
+        <p>2. Qual tipo de animal seu pet é ?</p>
+
+        <label for="cachorro">
+          <input type="radio" id="cachorro" name="typepet"> Cachorro
         </label>
 
-        <label for="arroz"> 
-          <input type="checkbox" id="arroz" name="arroz"> Arroz
+        <label for="gato">
+          <input type="radio" id="gato" name="typepet"> Gato
         </label>
 
-        <label for="ovos"> 
-          <input type="checkbox" id="ovos" name="ovos"> Ovos
+        <label for="capivara">
+          <input type="radio" id="capivara" name="typepet"> Capivara
         </label>
 
-        <label for="refri"> 
-          <input type="checkbox" id="refri" name="refri"> Refrigerante
+        <label for="outro">
+          <input type="radio" id="outro" name="typepet"> Outro
+        </label>
+        
+      </section>
+      <section>
+        <p>3. Qual a data de nascimento do seu pet ?</p>
+
+        <label for="datepet">
+          <input type="date" id="datepet" name="datepet">
         </label>
 
-        <label for="tudo"> 
-          <input type="checkbox" id="tudo" name="tudo"> Tudo
-        </label>
-    </section>
-    <section>
-      <p>5. Qual a frequência que você leva seu pet para passear?</p>
+      </section>
+      <section>
+        <p>4. Com o que você alimenta seu pet?</p>
 
-      <label for="nlevo">
-        <input type="radio" id="nlevo" name="passear"> Não levo
-      </label>
+          <label for="racao"> 
+            <input type="checkbox" id="racao" name="racao"> Ração
+          </label>
 
-      <label for="1x">
-        <input type="radio" id="1x" name="passear"> 1x na semana
-      </label>
+          <label for="sementes"> 
+            <input type="checkbox" id="sementes" name="sementes"> Sementes
+          </label>
 
-      <label for="2x">
-        <input type="radio" id="2x" name="passear"> 2x na semana
-      </label>
+          <label for="arroz"> 
+            <input type="checkbox" id="arroz" name="arroz"> Arroz
+          </label>
 
-      <label for="fds">
-        <input type="radio" id="fds" name="passear"> Fins de semana
-      </label>
+          <label for="ovos"> 
+            <input type="checkbox" id="ovos" name="ovos"> Ovos
+          </label>
 
-      <label for="todos">
-        <input type="radio" id="todos" name="passear"> Todos os dias!
-      </label>
-    </section>
-    <section>
-      <p>6. De 0% a 100%, quanto vc acha que seu pet é hiperativo? <span>*</span></p>
+          <label for="refri"> 
+            <input type="checkbox" id="refri" name="refri"> Refrigerante
+          </label>
 
-      <label for="zeroacem">
-        0<input type="range" id="zeroacem" name="zeroacem">100
-      </label>
-    </section>
-    <section>
-      <p>7. Onde o seu pet dorme?</p>
+          <label for="tudo"> 
+            <input type="checkbox" id="tudo" name="tudo"> Tudo
+          </label>
+      </section>
+      <section>
+        <p>5. Qual a frequência que você leva seu pet para passear?</p>
 
-      <label for="chao">
-        <input type="radio" id="chao" name="sleeppet"> No chão
-      </label>
-
-      <label for="cama">
-        <input type="radio" id="cama" name="sleeppet"> Na cama 
-      </label>
-
-      <label for="gaiola">
-        <input type="radio" id="gaiola" name="sleeppet"> Gaiola
-      </label>
-
-      <label for="caixa">
-        <input type="radio" id="caixa" name="sleeppet"> Caixa 
-      </label>
-    </section>
-    <section>
-      <p>8. Você auto medicou seu pet?</p>
-
-        <label for="yesmedpet">
-          <input type="radio" id="yesmedpet" name="med">  Sim
+        <label for="nlevo">
+          <input type="radio" id="nlevo" name="passear"> Não levo
         </label>
 
-        <label for="nomedpet"> 
-          <input type="radio" id="nomedpet" name="med">  Não
+        <label for="1x">
+          <input type="radio" id="1x" name="passear"> 1x na semana
         </label>
 
-        <textarea
-          name="caixa"
-          id="caixa"
-          cols="40"
-          rows="2"
-          placeholder="Qual medicação? e porquê?"
-          required
-          min="2"
-        ></textarea>
-    </section>
-    <section>
-      <p>8. Seu pet tem um brinquedo favorito? Se sim qual a cor?</p>
+        <label for="2x">
+          <input type="radio" id="2x" name="passear"> 2x na semana
+        </label>
 
-      <label for="yestoypet">
-        <input type="radio" id="yestoypet" name="toy">Sim
-      </label>
+        <label for="fds">
+          <input type="radio" id="fds" name="passear"> Fins de semana
+        </label>
 
-      <label for="notoypet"> 
-        <input type="radio" id="notoypet" name="toy">Não
-      </label>
+        <label for="todos">
+          <input type="radio" id="todos" name="passear"> Todos os dias!
+        </label>
+      </section>
+      <section>
+        <p>6. De 0% a 100%, quanto vc acha que seu pet é hiperativo? <span>*</span></p>
 
-      <label for="colortoypet">
-        <input type="color">
-      </label>
+        <label for="zeroacem">
+          0<input type="range" id="zeroacem" name="zeroacem">100
+        </label>
+      </section>
+      <section>
+        <p>7. Onde o seu pet dorme?</p>
 
-    </section>
-    <section>
+        <label for="chao">
+          <input type="radio" id="chao" name="sleeppet"> No chão
+        </label>
 
-      <h4>Obrigado pelas respostas,deseja refazer o formulário ou enviar as informações?</h4>
-      <button type="reset">Limpar</button>
-      <button type="submit">Enviar</button>
+        <label for="cama">
+          <input type="radio" id="cama" name="sleeppet"> Na cama 
+        </label>
 
-    </section>
+        <label for="gaiola">
+          <input type="radio" id="gaiola" name="sleeppet"> Gaiola
+        </label>
+
+        <label for="caixa">
+          <input type="radio" id="caixa" name="sleeppet"> Caixa 
+        </label>
+      </section>
+      <section>
+        <p>8. Você auto medicou seu pet?</p>
+
+          <label for="yesmedpet">
+            <input type="radio" id="yesmedpet" name="med">  Sim
+          </label>
+
+          <label for="nomedpet"> 
+            <input type="radio" id="nomedpet" name="med">  Não
+          </label>
+
+          <textarea
+            name="caixa"
+            id="caixa"
+            cols="40"
+            rows="2"
+            placeholder="Qual medicação? e porquê?"
+            required
+            min="2"
+          ></textarea>
+      </section>
+      <section>
+        <p>8. Seu pet tem um brinquedo favorito? Se sim qual a cor?</p>
+
+        <label for="yestoypet">
+          <input type="radio" id="yestoypet" name="toy">Sim
+        </label>
+
+        <label for="notoypet"> 
+          <input type="radio" id="notoypet" name="toy">Não
+        </label>
+
+        <label for="colortoypet">
+          <input type="color">
+        </label>
+
+      </section>
+      <section>
+
+        <h4>Obrigado pelas respostas,deseja refazer o formulário ou enviar as informações?</h4>
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+
+      </section>
+    </form>
   </main>
   <script src="./script.js"></script>
 </body>
