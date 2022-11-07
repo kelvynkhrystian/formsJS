@@ -3,11 +3,20 @@
 const sessions = document.getElementsByTagName('section');
 const iniciarForms = document.querySelector('button');
 const buttons = document.getElementsByTagName('button');
+const imgGif = document.querySelector('img');
 
 // Funções
 
+const load = () => {
+  // por default as sessões serão escondidas!
+  for (let i=0; i<sessions.length; i+=1) {
+    sessions[i].style.display = 'none'
+  }
+}
+
+load();
+
 const start = () => {
-  // por default as sessões serão escondidas menos a primeira!
   for (let i=0; i<sessions.length; i+=1) {
     sessions[i].style.display = 'none'
   }
@@ -15,7 +24,20 @@ const start = () => {
 
 }
 
-start();
+// start();
+
+// função para simular um carregamento
+
+const loading = () => {
+
+  setTimeout( () => {
+    imgGif.style.display = 'none';
+    start();
+  },2300);
+}
+
+loading();
+
 
 const next = (event) => {
   let secAtual = event.target.parentElement
