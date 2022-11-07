@@ -121,7 +121,76 @@
         <input type="radio" id="todos" name="passear"> Todos os dias!
       </label>
     </section>
-    
+    <section>
+      <p>6. De 0% a 100%, quanto vc acha que seu pet é hiperativo? <span>*</span></p>
+
+      <label for="zeroacem">
+        0<input type="range" id="zeroacem" name="zeroacem">100
+      </label>
+    </section>
+    <section>
+      <p>7. Onde o seu pet dorme?</p>
+
+      <label for="chao">
+        <input type="radio" id="chao" name="sleeppet"> No chão
+      </label>
+
+      <label for="cama">
+        <input type="radio" id="cama" name="sleeppet"> Na cama 
+      </label>
+
+      <label for="gaiola">
+        <input type="radio" id="gaiola" name="sleeppet"> Gaiola
+      </label>
+
+      <label for="caixa">
+        <input type="radio" id="caixa" name="sleeppet"> Caixa 
+      </label>
+    </section>
+    <section>
+      <p>8. Você auto medicou seu pet?</p>
+
+        <label for="yesmedpet">
+          <input type="radio" id="yesmedpet" name="med">  Sim
+        </label>
+
+        <label for="nomedpet"> 
+          <input type="radio" id="nomedpet" name="med">  Não
+        </label>
+
+        <textarea
+          name="caixa"
+          id="caixa"
+          cols="40"
+          rows="2"
+          placeholder="Qual medicação? e porquê?"
+          required
+          min="2"
+        ></textarea>
+    </section>
+    <section>
+      <p>8. Seu pet tem um brinquedo favorito? Se sim qual a cor?</p>
+
+      <label for="yestoypet">
+        <input type="radio" id="yestoypet" name="toy">Sim
+      </label>
+
+      <label for="notoypet"> 
+        <input type="radio" id="notoypet" name="toy">Não
+      </label>
+
+      <label for="colortoypet">
+        <input type="color">
+      </label>
+
+    </section>
+    <section>
+
+      <h4>Obrigado pelas respostas,deseja refazer o formulário ou enviar as informações?</h4>
+      <button type="reset">Limpar</button>
+      <button type="submit">Enviar</button>
+
+    </section>
   </main>
   <script src="./script.js"></script>
 </body>
