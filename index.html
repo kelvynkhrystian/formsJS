@@ -9,7 +9,40 @@
 </head>
 <body>
   <main>
+    <section>
+      <h2>Forms de cuidado ao Pet</h2>
+      <h4>catalogando informações para pesquisa!</h4>
+      <hr>
+      <label for="name">
+        <p>Nome ( não será salvo )</p>
+        <input
+          type="text"
+          name="name"
+          placeholder="digite seu nome" 
+          required
+        >
+      </label>
+      <label for="email">
+        <p>Email <span>*</span></p>
+        <input
+          type="email" 
+          name="email"
+          placeholder="digite seu email" 
+          required
+        >
+      </label>
+    </section>
+    <section>
+      <p>1. Você tem algum pet ?</p>
 
+      <label for="yespet">
+        <input type="radio" id="yespet" name="yesnopet">Sim
+      </label>
+
+      <label for="nopet"> 
+        <input type="radio" id="nopet" name="yesnopet">Não
+      </label>
+    </section>
   </main>
   <script src="./script.js"></script>
 </body>
