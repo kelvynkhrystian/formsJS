@@ -4,13 +4,18 @@ const sessions = document.getElementsByTagName('section');
 const iniciarForms = document.querySelector('button');
 const buttons = document.getElementsByTagName('button');
 
-// por default as sessões serão escondidas menos a primeira!
+// Funções
 
-for (let i=1; i<sessions.length; i+=1) {
-  sessions[i].style.display = 'none'
+const start = () => {
+  // por default as sessões serão escondidas menos a primeira!
+  for (let i=0; i<sessions.length; i+=1) {
+    sessions[i].style.display = 'none'
+  }
+  sessions[0].style.display = 'flex'
+
 }
 
-// Funções
+start();
 
 const next = (event) => {
   let secAtual = event.target.parentElement
