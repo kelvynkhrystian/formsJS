@@ -24,9 +24,7 @@ const start = () => {
 
 }
 
-// start();
-
-// função para simular um carregamento
+// função para simular um carregamento feito pelo gif
 
 const loading = () => {
 
@@ -37,7 +35,6 @@ const loading = () => {
 }
 
 loading();
-
 
 const next = (event) => {
   let secAtual = event.target.parentElement
@@ -68,7 +65,6 @@ const previous = (event) => {
 for (let i=1; i<buttons.length; i+=1) {
   if (buttons[i].innerText.includes('Próximo')) {
     buttons[i].onclick = next;
-    // console.log(buttons[i]);
   }
 }
 
@@ -77,7 +73,6 @@ for (let i=1; i<buttons.length; i+=1) {
 for (let i=1; i<buttons.length; i+=1) {
   if (buttons[i].innerText.includes('Anterior')) {
     buttons[i].onclick = previous;
-    // console.log(buttons[i]);
   }
 }
 
