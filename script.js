@@ -22,9 +22,7 @@ const start = () => {
   for (let i=0; i<sessions.length; i+=1) {
     sessions[i].style.display = 'none'
   }
-  sessions[0].style.display = 'flex'
-  fim.style.display = 'none'
-
+  sessions[0].style.display = 'flex';
 }
 
 const loading = () => {
@@ -37,8 +35,21 @@ const loading = () => {
 
 loading();
 
-const next = (event) => {
+const firstNext = (event) => {
   let secAtual = event.target.parentElement
+  secAtual.style.display = 'none'
+
+  for (let i=0; i<sessions.length; i+=1) {
+    if (sessions[i] === secAtual) {
+      sessions[i+1].style.display = 'flex'
+      break;
+    }
+  }
+}
+
+const next = (event) => {
+  let secAtual = event.target.parentElement.parentElement
+  console.log(secAtual);
   secAtual.style.display = 'none'
 
   for (let i=0; i<sessions.length; i+=1) {
@@ -84,7 +95,7 @@ for (let i=1; i<buttons.length; i+=1) {
 // Botões terão class="btn btn-dark"
 
 for (let i=0; i<buttons.length; i+=1) {
-  buttons[i].className = "btn btn-outline-dark"
+  buttons[i].className = "btn btn-outline-dark";
 }
 
 // Estilizando inputs com class="input-group"
@@ -104,5 +115,5 @@ for (let i=0; i<buttons.length; i+=1) {
 
 // Eventos
 
-iniciar.addEventListener('click', next);
+iniciar.addEventListener('click', firstNext);
 form.addEventListener('reset', start);
