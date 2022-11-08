@@ -8,6 +8,8 @@ const imgGif = document.querySelector('img');
 const inputName = document.getElementById('name')
 const inputEmail = document.getElementById('email')
 const form = document.getElementById('form')
+const fim = document.getElementById('fim')
+const voltar = document.getElementById('voltar')
 
 // Funções
 
@@ -28,10 +30,8 @@ const start = () => {
 
 }
 
-// função para simular um carregamento feito pelo gif
-
 const loading = () => {
-
+// função para simular um carregamento feito pelo gif
   setTimeout( () => {
     imgGif.style.display = 'none';
     start();
@@ -63,24 +63,13 @@ const previous = (event) => {
     }
   }
 }
-// let count=0;
 
-// const disableOff = (event) => {
+const submit = () => {
+  load();
+  fim.style.display = 'flex'
+}
 
-//   if (event.target.value.length > 1) {
-//     buttons[0].disabled = false;
-    
-//   } else {
-//     buttons[0].disabled = true;
-//   }
-// }
-
-// inputName.addEventListener('change',desableOff)
-// inputEmail.addEventListener('change',desableOff)
-
-// for (let i=1; i<inputs.length; i+=1) {
-//   inputs[i].addEventListener('change', disableOff)
-// }
+// Funções de Validação do forms 
 
 
 
@@ -104,3 +93,5 @@ for (let i=1; i<buttons.length; i+=1) {
 
 iniciar.addEventListener('click', next);
 form.addEventListener('reset', start);
+form.addEventListener('submit', start);
+voltar.addEventListener('click', start);
