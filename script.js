@@ -3,13 +3,8 @@
 const sessions = document.getElementsByTagName('section');
 const iniciar = document.getElementById('iniciar')
 const buttons = document.getElementsByTagName('button');
-const inputs = document.getElementsByTagName('input');
 const imgGif = document.querySelector('img');
-const inputName = document.getElementById('name')
-const inputEmail = document.getElementById('email')
 const form = document.getElementById('form')
-const fim = document.getElementById('fim')
-const voltar = document.getElementById('voltar')
 
 // Funções
 
@@ -27,6 +22,7 @@ const start = () => {
     sessions[i].style.display = 'none'
   }
   sessions[0].style.display = 'flex'
+  fim.style.display = 'none'
 
 }
 
@@ -64,11 +60,6 @@ const previous = (event) => {
   }
 }
 
-const submit = () => {
-  load();
-  fim.style.display = 'flex'
-}
-
 // Funções de Validação do forms 
 
 
@@ -93,5 +84,3 @@ for (let i=1; i<buttons.length; i+=1) {
 
 iniciar.addEventListener('click', next);
 form.addEventListener('reset', start);
-form.addEventListener('submit', start);
-voltar.addEventListener('click', start);
