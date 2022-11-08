@@ -32,14 +32,13 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-}
-
-article {
-  display: none;
-  flex-direction: column;
+  width: 100%;
 }
 
 form {
-  max-width: 100%;
+  width: 90%;
+}
+
+label {
+  width: 100%;
 }

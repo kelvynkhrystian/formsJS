@@ -84,7 +84,7 @@ for (let i=1; i<buttons.length; i+=1) {
 // Botões terão class="btn btn-dark"
 
 for (let i=0; i<buttons.length; i+=1) {
-  buttons[i].className = "btn btn-outline-primary"
+  buttons[i].className = "btn btn-outline-dark"
 }
 
 // Estilizando inputs com class="input-group"
