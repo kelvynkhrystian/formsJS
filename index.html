@@ -17,13 +17,14 @@
     <form action="/index2.html" method="GET">
       <section>
         <h2>Forms de cuidado ao Pet</h2>
-        <h4>8 perguntas rápidas para donos de pet!</h4>
+        <h4>9 perguntas rápidas para donos de pet!</h4>
         <hr>
         <label for="name">
           <p>Nome</p>
           <input
             type="text"
             name="name"
+            id="name"
             placeholder="digite seu nome" 
             required
           >
@@ -33,11 +34,12 @@
           <input
             type="email" 
             name="email"
+            id="email"
             placeholder="digite seu email" 
             required
           >
         </label>
-        <button type="button">Começe a responder!</button>
+        <button type="submit" id="iniciar" disabled>Começe a responder!</button>
       </section>
       <section>
         <p>1. Você tem algum pet ?</p>
@@ -51,7 +53,7 @@
         </label>
         <button type="button">Anterior</button>
 
-        <button type="button">Próximo</button>
+        <button type="button"  disabled>Próximo</button>
       </section>
       <section>
         <p>2. Qual tipo de animal seu pet é ?</p>
@@ -73,7 +75,7 @@
         </label>
         <button type="button">Anterior</button>
 
-        <button type="button">Próximo</button>
+        <button type="button" disabled>Próximo</button>
         
       </section>
       <section>
@@ -83,7 +85,7 @@
           <input type="date" id="datepet" name="datepet">
         </label>
         <button type="button">Anterior</button>
-        <button type="button">Próximo</button>
+        <button type="button" disabled>Próximo</button>
 
       </section>
       <section>
@@ -113,7 +115,7 @@
             <input type="checkbox" id="tudo" name="tudo"> Tudo
           </label>
           <button type="button">Anterior</button>
-          <button type="button">Próximo</button>
+          <button type="button" disabled>Próximo</button>
       </section>
       <section>
         <p>5. Qual a frequência que você leva seu pet para passear?</p>
@@ -139,7 +141,7 @@
         </label>
         <button type="button">Anterior</button>
 
-        <button type="button">Próximo</button>
+        <button type="button" disabled>Próximo</button>
       </section>
       <section>
         <p>6. De 0% a 100%, quanto vc acha que seu pet é hiperativo? <span>*</span></p>
@@ -149,7 +151,7 @@
         </label>
         <button type="button">Anterior</button>
 
-        <button type="button">Próximo</button>
+        <button type="button" disabled>Próximo</button>
       </section>
       <section>
         <p>7. Onde o seu pet dorme?</p>
@@ -170,7 +172,7 @@
           <input type="radio" id="caixa" name="sleeppet"> Caixa 
         </label>
         <button type="button">Anterior</button>
-        <button type="button">Próximo</button>
+        <button type="button" disabled>Próximo</button>
       </section>
       <section>
         <p>8. Você auto medicou seu pet?</p>
@@ -189,11 +191,10 @@
             cols="40"
             rows="2"
             placeholder="Qual medicação? e porquê?"
-            required
-            min="2"
+            disabled
           ></textarea>
         <button type="button">Anterior</button>
-        <button type="button">Próximo</button>
+        <button type="button" disabled>Próximo</button>
       </section>
       <section>
         <p>9. Seu pet tem um brinquedo favorito? Se sim qual a cor?</p>
@@ -207,18 +208,18 @@
         </label>
 
         <label for="colortoypet">
-          <input type="color">
+          <input type="color" disabled>
         </label>
 
         <button type="button">Anterior</button>
-        <button type="button">Próximo</button>
+        <button type="button" disabled>Próximo</button>
 
       </section>
       <section>
 
         <h4>Deseja limpar o formulário ou enviar as informações?</h4>
         <button type="reset" id="reset">Limpar</button>
-        <button type="submit" id="submit">Enviar</button>
+        <button type="button" id="submit">Enviar</button>
         <button type="button">Anterior</button>
 
 

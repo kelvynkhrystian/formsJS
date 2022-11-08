@@ -1,9 +1,12 @@
 // Declarações iniciais
 
 const sessions = document.getElementsByTagName('section');
-const iniciarForms = document.querySelector('button');
+const iniciar = document.getElementById('iniciar')
 const buttons = document.getElementsByTagName('button');
+const inputs = document.getElementsByTagName('input');
 const imgGif = document.querySelector('img');
+const inputName = document.getElementById('name')
+const inputEmail = document.getElementById('email')
 
 // Funções
 
@@ -59,6 +62,26 @@ const previous = (event) => {
     }
   }
 }
+// let count=0;
+
+// const disableOff = (event) => {
+
+//   if (event.target.value.length > 1) {
+//     buttons[0].disabled = false;
+    
+//   } else {
+//     buttons[0].disabled = true;
+//   }
+// }
+
+// inputName.addEventListener('change',desableOff)
+// inputEmail.addEventListener('change',desableOff)
+
+// for (let i=1; i<inputs.length; i+=1) {
+//   inputs[i].addEventListener('change', disableOff)
+// }
+
+
 
 // Botões com nome 'próximo' são ligadas a func next
 
@@ -78,4 +101,4 @@ for (let i=1; i<buttons.length; i+=1) {
 
 // Eventos
 
-iniciarForms.addEventListener('click', next);
+iniciar.addEventListener('click', next);
