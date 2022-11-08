@@ -7,6 +7,7 @@ const inputs = document.getElementsByTagName('input');
 const imgGif = document.querySelector('img');
 const inputName = document.getElementById('name')
 const inputEmail = document.getElementById('email')
+const form = document.getElementById('form')
 
 // Funções
 
@@ -102,3 +103,4 @@ for (let i=1; i<buttons.length; i+=1) {
 // Eventos
 
 iniciar.addEventListener('click', next);
+form.addEventListener('reset', start);
