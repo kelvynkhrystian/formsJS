@@ -5,6 +5,7 @@ const iniciar = document.getElementById('iniciar')
 const buttons = document.getElementsByTagName('button');
 const imgGif = document.querySelector('img');
 const form = document.getElementById('form')
+const inputs = document.getElementsByTagName('input');
 
 // Funções
 
@@ -83,8 +84,23 @@ for (let i=1; i<buttons.length; i+=1) {
 // Botões terão class="btn btn-dark"
 
 for (let i=0; i<buttons.length; i+=1) {
-  buttons[i].className = "btn btn-outline-dark"
+  buttons[i].className = "btn btn-outline-primary"
 }
+
+// Estilizando inputs com class="input-group"
+
+// for (let i=0; i<inputs.length; i+=1) {
+
+//   if((inputs[i].type === 'text') || (inputs[i].type === 'email')) {
+//     inputs[i].className = "input-group-text"
+//   }
+
+//   if((inputs[i].type === 'radio') || (inputs[i].type === 'checkbox')) {
+//     // inputs[i].className = "input-group mb-3"
+//   }
+  
+// }
+
 
 // Eventos
 
