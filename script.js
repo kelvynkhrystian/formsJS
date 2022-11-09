@@ -8,9 +8,11 @@ const form = document.getElementById('form')
 const inputs = document.getElementsByTagName('input');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
 const valid1 = document.querySelector('input[id="yespet"]');
 const valid2 = document.querySelector('input[id="nopet"]');
 const answersQ2 = document.querySelectorAll("input[name='typepet']");
+const answerQ3 = document.querySelector("input[name='datepet']");
 
 // Funções
 
@@ -32,6 +34,7 @@ const start = () => {
   // disabled btns proximo
   btn2.disabled = true;
   btn3.disabled = true;
+  btn4.disabled = true;
 }
 
 const loading = () => {
@@ -108,6 +111,14 @@ const disabledOffQuestion2 = (event) => {
   }
 }
 
+const disabledOffQuestion3 = (event) => {
+  if (event.target.value !== '') {
+    btn4.disabled = false;
+  } else {
+    btn4.disabled = true;
+  }
+}
+
 // Botões com nome 'próximo' são ligadas a func next
 
 for (let i=1; i<buttons.length; i+=1) {
@@ -156,3 +167,4 @@ answersQ2[0].addEventListener('click', disabledOffQuestion2);
 answersQ2[1].addEventListener('click', disabledOffQuestion2);
 answersQ2[2].addEventListener('click', disabledOffQuestion2);
 answersQ2[3].addEventListener('click', disabledOffQuestion2);
+answerQ3.addEventListener('change',disabledOffQuestion3);
