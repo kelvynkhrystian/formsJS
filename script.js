@@ -27,6 +27,7 @@ const answerQ8 = document.querySelectorAll("input[name='med']");
 const answerQ9 = document.querySelectorAll("input[name='toy']");
 const textarea = document.getElementById('textarea');
 const color = document.getElementById('color');
+const spans = document.querySelectorAll('span');
 
 // Funções
 
@@ -42,7 +43,7 @@ const start = () => {
     sessions[i].style.display = 'none'
   }
   sessions[0].style.display = 'flex';
-
+  iniciar.disabled = true
   btnsDisabled();
 }
 
@@ -91,6 +92,29 @@ const previous = (event) => {
 }
 
 // Funções de Validação do forms 
+
+const registerName = () => {
+  
+  if (inputs[0].value.length > 2) {
+    iniciar.disabled = false;
+    spans[0].style.display = 'none'
+    
+  } else {
+    iniciar.disabled = true;
+    spans[0].style.display = 'flex'
+  }
+}
+
+const registerEmail = () => {
+  if (inputs[1].value.length > 5) {
+    iniciar.disabled = false;
+    spans[1].style.display = 'none'
+    
+  } else {
+    iniciar.disabled = true;
+    spans[1].style.display = 'flex'
+  }
+}
 
 const requisitoMinimo = () => {
   if (valid2.checked === true) {
@@ -251,6 +275,8 @@ answerQ8[0].addEventListener('click', disabledOffQuestion8);
 answerQ8[1].addEventListener('click', disabledOffQuestion8);
 answerQ9[0].addEventListener('click', disabledOffQuestion9);
 answerQ9[1].addEventListener('click', disabledOffQuestion9);
+inputs[0].addEventListener('change', registerName);
+inputs[1].addEventListener('change', registerEmail);
 
 
 window.onload = () => {
