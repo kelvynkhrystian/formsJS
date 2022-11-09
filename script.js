@@ -242,7 +242,7 @@ answerQ5[1].addEventListener('click', disabledOffQuestion5);
 answerQ5[2].addEventListener('click', disabledOffQuestion5);
 answerQ5[3].addEventListener('click', disabledOffQuestion5);
 answerQ5[4].addEventListener('click', disabledOffQuestion5);
-answerQ6.addEventListener('click',disabledOffQuestion6);
+answerQ6.addEventListener('change',disabledOffQuestion6);
 answerQ7[0].addEventListener('click', disabledOffQuestion7);
 answerQ7[1].addEventListener('click', disabledOffQuestion7);
 answerQ7[2].addEventListener('click', disabledOffQuestion7);
