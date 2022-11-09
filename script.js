@@ -9,6 +9,7 @@ const inputs = document.getElementsByTagName('input');
 const btn2 = document.getElementById('btn2');
 const valid1 = document.querySelector('input[id="yespet"]');
 const valid2 = document.querySelector('input[id="nopet"]');
+const p = document.querySelector('p');
 
 // Funções
 
@@ -51,9 +52,8 @@ const firstNext = (event) => {
 }
 
 const next = (event) => {
-  let secAtual = event.target.parentElement.parentElement
-  console.log(secAtual);
-  secAtual.style.display = 'none'
+  let secAtual = event.target.parentElement.parentElement;
+  secAtual.style.display = 'none';
 
   for (let i=0; i<sessions.length; i+=1) {
     if (sessions[i] === secAtual) {
@@ -64,8 +64,9 @@ const next = (event) => {
 }
 
 const previous = (event) => {
-  let secAtual = event.target.parentElement.parentElement
-  secAtual.style.display = 'none'
+  let secAtual = event.target.parentElement.parentElement;
+  console.log(secAtual);
+  secAtual.style.display = 'none';
 
   for (let i=0; i<sessions.length; i+=1) {
     if (sessions[i] === secAtual) {
@@ -77,7 +78,7 @@ const previous = (event) => {
 
 // Funções de Validação do forms 
 
-const reqMin = () => {
+const requisitoMinimo = () => {
   if (valid2.checked === true) {
     window.location.href='./index3.html';
   } else {
@@ -86,15 +87,13 @@ const reqMin = () => {
   
 }
 
-// const disabledOff = () => {
-//   if (valid1.checked === true || valid2.checked === true) {
-//     btn2.disabled = false;
-//   } else {
-//     btn2.disabled = true;
-//   }
-  
-//   document.querySelector('input[id="yespet"]:checked')
-// }
+const disabledOffQuestion1 = () => {
+  if (valid1.checked === true || valid2.checked === true) {
+    btn2.disabled = false;
+  } else {
+    btn2.disabled = true;
+  }
+}
 
 // Botões com nome 'próximo' são ligadas a func next
 
@@ -137,5 +136,6 @@ for (let i=0; i<buttons.length; i+=1) {
 
 iniciar.addEventListener('click', firstNext);
 form.addEventListener('reset', start);
-btn2.addEventListener('click', reqMin);
-// valid1.addEventListener('click',reqMin);
+btn2.addEventListener('click', requisitoMinimo);
+valid1.addEventListener('click', disabledOffQuestion1);
+valid2.addEventListener('click', disabledOffQuestion1);
