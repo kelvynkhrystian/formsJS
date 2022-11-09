@@ -12,9 +12,11 @@ const btn4 = document.getElementById('btn4');
 const btn5 = document.getElementById('btn5');
 const valid1 = document.querySelector('input[id="yespet"]');
 const valid2 = document.querySelector('input[id="nopet"]');
-const answersQ2 = document.querySelectorAll("input[name='typepet']");
+const answerQ2 = document.querySelectorAll("input[name='typepet']");
 const answerQ3 = document.querySelector("input[name='datepet']");
 const answerQ4 = document.querySelectorAll("input[type='checkbox']");
+const answerQ5 = document.querySelectorAll("input[name='passear']");
+
 
 // Funções
 
@@ -139,6 +141,14 @@ const disabledOffQuestion4 = () => {
   count = 0
 }
 
+const disabledOffQuestion5 = (event) => {
+  if (event.target.checked === true) {
+    btn5.disabled = false;
+  } else {
+    btn5.disabled = true;
+  }
+}
+
 // Botões com nome 'próximo' são ligadas a func next e serão desabilitados
 
 for (let i=1; i<buttons.length; i+=1) {
@@ -184,10 +194,10 @@ form.addEventListener('reset', start);
 btn2.addEventListener('click', requisitoMinimo);
 valid1.addEventListener('click', disabledOffQuestion1);
 valid2.addEventListener('click', disabledOffQuestion1);
-answersQ2[0].addEventListener('click', disabledOffQuestion2);
-answersQ2[1].addEventListener('click', disabledOffQuestion2);
-answersQ2[2].addEventListener('click', disabledOffQuestion2);
-answersQ2[3].addEventListener('click', disabledOffQuestion2);
+answerQ2[0].addEventListener('click', disabledOffQuestion2);
+answerQ2[1].addEventListener('click', disabledOffQuestion2);
+answerQ2[2].addEventListener('click', disabledOffQuestion2);
+answerQ2[3].addEventListener('click', disabledOffQuestion2);
 answerQ3.addEventListener('change',disabledOffQuestion3);
 answerQ4[0].addEventListener('click', disabledOffQuestion4);
 answerQ4[1].addEventListener('click', disabledOffQuestion4);
@@ -195,3 +205,8 @@ answerQ4[4].addEventListener('click', disabledOffQuestion4);
 answerQ4[3].addEventListener('click', disabledOffQuestion4);
 answerQ4[4].addEventListener('click', disabledOffQuestion4);
 answerQ4[5].addEventListener('click', disabledOffQuestion4);
+answerQ5[0].addEventListener('click', disabledOffQuestion5);
+answerQ5[1].addEventListener('click', disabledOffQuestion5);
+answerQ5[2].addEventListener('click', disabledOffQuestion5);
+answerQ5[3].addEventListener('click', disabledOffQuestion5);
+answerQ5[4].addEventListener('click', disabledOffQuestion5);
