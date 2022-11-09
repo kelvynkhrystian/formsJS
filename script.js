@@ -13,6 +13,8 @@ const btn4 = document.getElementById('btn4');
 const btn5 = document.getElementById('btn5');
 const btn6 = document.getElementById('btn6');
 const btn7 = document.getElementById('btn7');
+const btn8 = document.getElementById('btn8');
+const btn9 = document.getElementById('btn9');
 const valid1 = document.querySelector('input[id="yespet"]');
 const valid2 = document.querySelector('input[id="nopet"]');
 const answerQ2 = document.querySelectorAll("input[name='typepet']");
@@ -21,7 +23,10 @@ const answerQ4 = document.querySelectorAll("input[type='checkbox']");
 const answerQ5 = document.querySelectorAll("input[name='passear']");
 const answerQ6 = document.querySelector("input[name='zeroacem']");
 const answerQ7 = document.querySelectorAll("input[name='sleeppet']");
-
+const answerQ8 = document.querySelectorAll("input[name='med']");
+const answerQ9 = document.querySelectorAll("input[name='toy']");
+const textarea = document.getElementById('textarea');
+const color = document.getElementById('color');
 
 // Funções
 
@@ -159,6 +164,28 @@ const disabledOffQuestion7 = (event) => {
   }
 }
 
+const disabledOffQuestion8 = (event) => {
+  if (event.target.value === 'sim') {
+    btn8.disabled = false;
+    textarea.disabled = false;
+
+  } else {
+    btn8.disabled = false;
+    textarea.disabled = true;
+  }
+}
+
+const disabledOffQuestion9 = (event) => {
+  if (event.target.value === 'sim') {
+    btn9.disabled = false;
+    color.disabled = false;
+
+  } else {
+    btn9.disabled = false;
+    color.disabled = true;
+  }
+}
+
 // FIM - Funções de Validação do forms 
 
 const btnsEventsNext = () => {
@@ -220,6 +247,10 @@ answerQ7[0].addEventListener('click', disabledOffQuestion7);
 answerQ7[1].addEventListener('click', disabledOffQuestion7);
 answerQ7[2].addEventListener('click', disabledOffQuestion7);
 answerQ7[3].addEventListener('click', disabledOffQuestion7);
+answerQ8[0].addEventListener('click', disabledOffQuestion8);
+answerQ8[1].addEventListener('click', disabledOffQuestion8);
+answerQ9[0].addEventListener('click', disabledOffQuestion9);
+answerQ9[1].addEventListener('click', disabledOffQuestion9);
 
 
 window.onload = () => {
