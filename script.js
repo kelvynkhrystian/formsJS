@@ -6,6 +6,7 @@ const buttons = document.getElementsByTagName('button');
 const imgGif = document.querySelector('img');
 const form = document.getElementById('form')
 const inputs = document.getElementsByTagName('input');
+const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 const btn4 = document.getElementById('btn4');
@@ -182,7 +183,7 @@ const btnsBootstrap = () => {
 
 iniciar.addEventListener('click', firstNext);
 form.addEventListener('reset', start);
-btn2.addEventListener('click', requisitoMinimo);
+btn1.addEventListener('click', requisitoMinimo);
 valid1.addEventListener('click', disabledOffQuestion1);
 valid2.addEventListener('click', disabledOffQuestion1);
 answerQ2[0].addEventListener('click', disabledOffQuestion2);
