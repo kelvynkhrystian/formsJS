@@ -34,13 +34,10 @@ const start = () => {
   }
   sessions[0].style.display = 'flex';
 
-  // disabled btns proximo
-  btn2.disabled = true;
-  btn3.disabled = true;
-  btn4.disabled = true;
+  btnsDisabled();
 }
 
-const loading = () => {
+const gifAbertura = () => {
 // função para simular um carregamento feito pelo gif
   setTimeout( () => {
     imgGif.style.display = 'none';
@@ -205,7 +202,7 @@ answerQ5[4].addEventListener('click', disabledOffQuestion5);
 
 window.onload = () => {
   load();
-  loading();
+  gifAbertura();
   btnsEventsNext();
   btnsEventsPrevious();
   btnsDisabled();
