@@ -11,12 +11,14 @@ const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 const btn4 = document.getElementById('btn4');
 const btn5 = document.getElementById('btn5');
+const btn6 = document.getElementById('btn6');
 const valid1 = document.querySelector('input[id="yespet"]');
 const valid2 = document.querySelector('input[id="nopet"]');
 const answerQ2 = document.querySelectorAll("input[name='typepet']");
 const answerQ3 = document.querySelector("input[name='datepet']");
 const answerQ4 = document.querySelectorAll("input[type='checkbox']");
 const answerQ5 = document.querySelectorAll("input[name='passear']");
+const answerQ6 = document.querySelector("input[name='zeroacem']");
 
 
 // Funções
@@ -143,6 +145,18 @@ const disabledOffQuestion5 = (event) => {
   }
 }
 
+const disabledOffQuestion6 = () => {
+  btn6.disabled = false;
+}
+
+// const disabledOffQuestion7 = (event) => {
+//   if (event.target.checked === true) {
+//     btn7.disabled = false;
+//   } else {
+//     btn7.disabled = true;
+//   }
+// }
+
 // FIM - Funções de Validação do forms 
 
 const btnsEventsNext = () => {
@@ -199,6 +213,8 @@ answerQ5[1].addEventListener('click', disabledOffQuestion5);
 answerQ5[2].addEventListener('click', disabledOffQuestion5);
 answerQ5[3].addEventListener('click', disabledOffQuestion5);
 answerQ5[4].addEventListener('click', disabledOffQuestion5);
+answerQ6.addEventListener('click',disabledOffQuestion6);
+
 
 window.onload = () => {
   load();
