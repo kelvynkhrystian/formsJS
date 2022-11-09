@@ -9,10 +9,12 @@ const inputs = document.getElementsByTagName('input');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 const btn4 = document.getElementById('btn4');
+const btn5 = document.getElementById('btn5');
 const valid1 = document.querySelector('input[id="yespet"]');
 const valid2 = document.querySelector('input[id="nopet"]');
 const answersQ2 = document.querySelectorAll("input[name='typepet']");
 const answerQ3 = document.querySelector("input[name='datepet']");
+const answerQ4 = document.querySelectorAll("input[type='checkbox']");
 
 // Funções
 
@@ -73,7 +75,6 @@ const next = (event) => {
 
 const previous = (event) => {
   let secAtual = event.target.parentElement.parentElement;
-  console.log(secAtual);
   secAtual.style.display = 'none';
 
   for (let i=0; i<sessions.length; i+=1) {
@@ -117,6 +118,25 @@ const disabledOffQuestion3 = (event) => {
   } else {
     btn4.disabled = true;
   }
+}
+
+let count = 0
+
+const disabledOffQuestion4 = () => {
+
+  for (let i=0; i<answerQ4.length; i+=1) {
+    if (answerQ4[i].checked === true) {
+      count += 1;
+    }
+  }
+
+  if (count > 0) {
+    btn5.disabled = false;
+  } else {
+    btn5.disabled = true;
+  }
+  
+  count = 0
 }
 
 // Botões com nome 'próximo' são ligadas a func next e serão desabilitados
@@ -169,3 +189,9 @@ answersQ2[1].addEventListener('click', disabledOffQuestion2);
 answersQ2[2].addEventListener('click', disabledOffQuestion2);
 answersQ2[3].addEventListener('click', disabledOffQuestion2);
 answerQ3.addEventListener('change',disabledOffQuestion3);
+answerQ4[0].addEventListener('click', disabledOffQuestion4);
+answerQ4[1].addEventListener('click', disabledOffQuestion4);
+answerQ4[4].addEventListener('click', disabledOffQuestion4);
+answerQ4[3].addEventListener('click', disabledOffQuestion4);
+answerQ4[4].addEventListener('click', disabledOffQuestion4);
+answerQ4[5].addEventListener('click', disabledOffQuestion4);
