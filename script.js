@@ -96,23 +96,34 @@ const previous = (event) => {
 const registerName = () => {
   
   if (inputs[0].value.length > 2) {
+
+    spans[0].style.display = 'none';
     iniciar.disabled = false;
-    spans[0].style.display = 'none'
     
   } else {
+    spans[0].style.display = 'flex';
     iniciar.disabled = true;
-    spans[0].style.display = 'flex'
+  }
+
+  if (inputs[1].value.length <= 5) {
+    iniciar.disabled = true;
   }
 }
 
 const registerEmail = () => {
+
   if (inputs[1].value.length > 5) {
+
+    spans[1].style.display = 'none';
     iniciar.disabled = false;
-    spans[1].style.display = 'none'
-    
+
   } else {
+    spans[1].style.display = 'flex';
     iniciar.disabled = true;
-    spans[1].style.display = 'flex'
+  }
+
+  if (inputs[0].value.length <= 2) {
+    iniciar.disabled = true;
   }
 }
 
