@@ -77,15 +77,23 @@ const previous = (event) => {
 
 // Funções de Validação do forms 
 
-// const reqMin = () => {
+const reqMin = () => {
+  if (valid2.checked === true) {
+    window.location.href='./index3.html';
+  } else {
+    next();
+  }
+  
+}
 
+// const disabledOff = () => {
 //   if (valid1.checked === true || valid2.checked === true) {
 //     btn2.disabled = false;
 //   } else {
 //     btn2.disabled = true;
 //   }
   
-//   // document.querySelector('input[id="yespet"]:checked')
+//   document.querySelector('input[id="yespet"]:checked')
 // }
 
 // Botões com nome 'próximo' são ligadas a func next
@@ -129,4 +137,5 @@ for (let i=0; i<buttons.length; i+=1) {
 
 iniciar.addEventListener('click', firstNext);
 form.addEventListener('reset', start);
+btn2.addEventListener('click', reqMin);
 // valid1.addEventListener('click',reqMin);
