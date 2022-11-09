@@ -119,15 +119,16 @@ const disabledOffQuestion3 = (event) => {
   }
 }
 
-// Botões com nome 'próximo' são ligadas a func next
+// Botões com nome 'próximo' são ligadas a func next e serão desabilitados
 
 for (let i=1; i<buttons.length; i+=1) {
   if (buttons[i].innerText.includes('Próximo')) {
     buttons[i].onclick = next;
+    buttons[i].disabled = true
   }
 }
 
-// Botões com nome 'anterior' são ligadas a func previous
+// Botões com nome 'anterior' são ligadas a func previous e serão desabilitados
 
 for (let i=1; i<buttons.length; i+=1) {
   if (buttons[i].innerText.includes('Anterior')) {
