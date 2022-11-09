@@ -6,6 +6,9 @@ const buttons = document.getElementsByTagName('button');
 const imgGif = document.querySelector('img');
 const form = document.getElementById('form')
 const inputs = document.getElementsByTagName('input');
+const btn2 = document.getElementById('btn2');
+const valid1 = document.querySelector('input[id="yespet"]');
+const valid2 = document.querySelector('input[id="nopet"]');
 
 // Funções
 
@@ -61,7 +64,7 @@ const next = (event) => {
 }
 
 const previous = (event) => {
-  let secAtual = event.target.parentElement
+  let secAtual = event.target.parentElement.parentElement
   secAtual.style.display = 'none'
 
   for (let i=0; i<sessions.length; i+=1) {
@@ -74,7 +77,16 @@ const previous = (event) => {
 
 // Funções de Validação do forms 
 
+// const reqMin = () => {
 
+//   if (valid1.checked === true || valid2.checked === true) {
+//     btn2.disabled = false;
+//   } else {
+//     btn2.disabled = true;
+//   }
+  
+//   // document.querySelector('input[id="yespet"]:checked')
+// }
 
 // Botões com nome 'próximo' são ligadas a func next
 
@@ -117,3 +129,4 @@ for (let i=0; i<buttons.length; i+=1) {
 
 iniciar.addEventListener('click', firstNext);
 form.addEventListener('reset', start);
+// valid1.addEventListener('click',reqMin);
