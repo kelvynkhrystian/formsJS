@@ -98,25 +98,25 @@ const requisitoMinimo = () => {
 
 const disabledOffQuestion1 = () => {
   if (valid1.checked === true || valid2.checked === true) {
+    btn1.disabled = false;
+  } else {
+    btn1.disabled = true;
+  }
+}
+
+const disabledOffQuestion2 = (event) => {
+  if (event.target.checked === true) {
     btn2.disabled = false;
   } else {
     btn2.disabled = true;
   }
 }
 
-const disabledOffQuestion2 = (event) => {
-  if (event.target.checked === true) {
+const disabledOffQuestion3 = (event) => {
+  if (event.target.value !== '') {
     btn3.disabled = false;
   } else {
     btn3.disabled = true;
-  }
-}
-
-const disabledOffQuestion3 = (event) => {
-  if (event.target.value !== '') {
-    btn4.disabled = false;
-  } else {
-    btn4.disabled = true;
   }
 }
 
@@ -131,11 +131,11 @@ const disabledOffQuestion4 = () => {
   }
 
   if (count > 0) {
-    btn5.disabled = false;
+    btn4.disabled = false;
   } else {
-    btn5.disabled = true;
+    btn4.disabled = true;
   }
-  
+
   count = 0
 }
 
