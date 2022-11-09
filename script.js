@@ -27,8 +27,6 @@ const load = () => {
   }
 }
 
-load();
-
 const start = () => {
   for (let i=0; i<sessions.length; i+=1) {
     sessions[i].style.display = 'none'
@@ -48,8 +46,6 @@ const loading = () => {
     start();
   },2300);
 }
-
-loading();
 
 const firstNext = (event) => {
   let secAtual = event.target.parentElement
@@ -149,43 +145,38 @@ const disabledOffQuestion5 = (event) => {
   }
 }
 
-// Botões com nome 'próximo' são ligadas a func next e serão desabilitados
+// FIM - Funções de Validação do forms 
 
-for (let i=1; i<buttons.length; i+=1) {
-  if (buttons[i].innerText.includes('Próximo')) {
-    buttons[i].onclick = next;
-    buttons[i].disabled = true
+const btnsEventsNext = () => {
+  for (let i=1; i<buttons.length; i+=1) {
+    if (buttons[i].innerText.includes('Próximo')) {
+      buttons[i].addEventListener('click', next);
+    }
   }
 }
 
-// Botões com nome 'anterior' são ligadas a func previous e serão desabilitados
-
-for (let i=1; i<buttons.length; i+=1) {
-  if (buttons[i].innerText.includes('Anterior')) {
-    buttons[i].onclick = previous;
+const btnsEventsPrevious = () => {
+  for (let i=1; i<buttons.length; i+=1) {
+    if (buttons[i].innerText.includes('Anterior')) {
+      buttons[i].addEventListener('click', previous);
+    }
   }
 }
 
-// Botões terão class="btn btn-dark"
-
-for (let i=0; i<buttons.length; i+=1) {
-  buttons[i].className = "btn btn-outline-dark";
+const btnsDisabled = () => {
+  for (let i=1; i<buttons.length; i+=1) {
+    if (buttons[i].innerText.includes('Próximo')) {
+      buttons[i].disabled = true
+    }
+  }
 }
 
-// Estilizando inputs com class="input-group"
-
-// for (let i=0; i<inputs.length; i+=1) {
-
-//   if((inputs[i].type === 'text') || (inputs[i].type === 'email')) {
-//     inputs[i].className = "input-group-text"
-//   }
-
-//   if((inputs[i].type === 'radio') || (inputs[i].type === 'checkbox')) {
-//     // inputs[i].className = "input-group mb-3"
-//   }
-  
-// }
-
+const btnsBootstrap = () => {
+  for (let i=0; i<buttons.length; i+=1) {
+    // Botões terão class="btn btn-dark"
+    buttons[i].className = "btn btn-outline-dark";
+  }
+}
 
 // Eventos
 
@@ -210,3 +201,12 @@ answerQ5[1].addEventListener('click', disabledOffQuestion5);
 answerQ5[2].addEventListener('click', disabledOffQuestion5);
 answerQ5[3].addEventListener('click', disabledOffQuestion5);
 answerQ5[4].addEventListener('click', disabledOffQuestion5);
+
+window.onload = () => {
+  load();
+  loading();
+  btnsEventsNext();
+  btnsEventsPrevious();
+  btnsDisabled();
+  btnsBootstrap();
+};
