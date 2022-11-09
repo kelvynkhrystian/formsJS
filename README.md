@@ -11,15 +11,13 @@
 #
 
 ## Treinando:
-#### Forms e suas validações
+#### DOM 
+#### Forms
 #### Eventos
-#### Arrow Functions
+#### Lógica JS
 #### Bootstrap
+#### Validações
+#### Tests - Jest
 #### Animações CSS
+#### Arrow Functions
 #### Responsividade - Mobile First
-#### Jest
-
-
-
-
-
