@@ -17,7 +17,5 @@
 #### Lógica JS
 #### Bootstrap
 #### Validações
-#### Tests - Jest
-#### Animações CSS
 #### Arrow Functions
 #### Responsividade - Mobile First
