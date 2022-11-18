@@ -59,3 +59,12 @@ textarea:focus {
 img {
   margin: 20px;
 }
+
+
+@media only screen and (min-width: 1001px) {
+
+  main {
+    width: 60%;
+  }
+
+}
